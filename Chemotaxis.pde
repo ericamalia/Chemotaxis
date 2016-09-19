@@ -4,7 +4,7 @@
  void setup()   
  {     
  	size(900, 500);
- 	colony = new Bacteria [40];
+ 	colony = new Bacteria [200];
  	for(int i=0; i<colony.length; i++)
  	 {
     colony[i] = new Bacteria();
@@ -41,13 +41,14 @@
  		ellipse(myX, myY, 10, 10);
  	}
  	void move () {
- 		myX = myX + ((int)(Math.random()*40)); 
+ 		myX = myX + ((int)(Math.random()*15)); 
  		if (myX >= 900){
  			myX = 0;
- 			myX = myX - ((int)(Math.random()*40)); 
+ 			myX = myX - ((int)(Math.random()*15)); 
  		}
- 	 if ( myX == mouseX){
- 	 	myY = myY + ((int)(Math.random()*40)-40); 
+ 	 if ( myX <= mouseX ) {
+ 	 	myX = myX + ((int)(Math.random()*40)-40);
+ 	 	
  	 }
  	}
  } 
