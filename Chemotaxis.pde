@@ -4,11 +4,11 @@
  void setup()   
  {     
  	size(900, 500);
- 	colony = new Bacteria [200];
+ 	colony = new Bacteria [400];
  	for(int i=0; i<colony.length; i++)
- 	 {
-    colony[i] = new Bacteria();
-	  }
+ 	{
+    	colony[i] = new Bacteria();
+	}
 	 b = loadImage("umbrella9.png");
  	   
  }  
@@ -20,9 +20,9 @@
  	image(b, mouseX, mouseY,100,100); 
 
  	for(int i=0; i<colony.length; i++)
-  {
-  	colony[i].show();
-    colony[i].move();
+    {
+  		colony[i].show();
+    	colony[i].move();
     
 	 } 
 
@@ -46,10 +46,15 @@
  			myX = 0;
  			myX = myX - ((int)(Math.random()*15)); 
  		}
- 	 if ( myX <= mouseX ) {
- 	 	myX = myX + ((int)(Math.random()*40)-40);
+ 	 if ( myX <= mouseX && myY == mouseY ) {
+ 	 	myX = myX + ((int)(Math.random()*20)-20);
  	 	
  	 }
+ 	if (mousePressed){
+ 		myX = ((int)(Math.random()*200));
+ 		myY = 
  	}
+ 	
  } 
+}
 
