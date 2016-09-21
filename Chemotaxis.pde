@@ -23,11 +23,12 @@
     {
   		colony[i].show();
     	colony[i].move();
-    
 	 } 
 
 	
  }  
+
+
  class Bacteria    
  {     
  	int myX, myY;
@@ -38,23 +39,26 @@
  	void show () {
  		stroke(((int)(Math.random()*255)),((int)(Math.random()*255)),((int)(Math.random()*255)));
  		noFill();
- 		ellipse(myX, myY, 10, 10);
+ 		ellipse(myX, myY, ((int)(Math.random()*12)),((int)(Math.random()*12)));
  	}
  	void move () {
- 		myX = myX + ((int)(Math.random()*15)); 
- 		if (myX >= 900){
- 			myX = 0;
- 			myX = myX - ((int)(Math.random()*15)); 
+ 		myX = myX + ((int)(Math.random()*10));
+ 		myX = ((int)(Math.random()*900));
+ 		myY = ((int)(Math.random()*150));
+ 		
+ 		if (mousePressed){
+ 			if (myX == Math.abs(mouseX-50) ) {
+ 				myX = ((int)(Math.random()*900));
+ 				myY = ((int)(Math.random()*500));
+ 			}
+ 			else {
+ 				myX = ((int)(Math.random()*900));
+ 				myY = ((int)(Math.random()*350));
+ 			}
+
  		}
- 	 if ( myX <= mouseX && myY == mouseY ) {
- 	 	myX = myX + ((int)(Math.random()*20)-20);
- 	 	
- 	 }
- 	if (mousePressed){
- 		myX = ((int)(Math.random()*200));
- 		myY = 
- 	}
+ 	 
  	
- } 
+}
 }
 
