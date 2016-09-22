@@ -9,7 +9,7 @@
  	{
     	colony[i] = new Bacteria();
 	}
-	 b = loadImage("umbrella9.png");
+	 b = loadImage("ufo_pastel.png");
  	   
  }  
 
@@ -17,7 +17,7 @@
  {    
  	background(0);
  	frameRate(15);
- 	image(b, mouseX, mouseY,100,100); 
+ 	image(b, mouseX, mouseY,150,100); 
 
  	for(int i=0; i<colony.length; i++)
     {
@@ -47,15 +47,12 @@
  		myY = ((int)(Math.random()*150));
  		
  		if (mousePressed){
- 			if (myX == Math.abs(mouseX-50) ) {
- 				myX = ((int)(Math.random()*900));
- 				myY = ((int)(Math.random()*500));
- 			}
- 			else {
- 				myX = ((int)(Math.random()*900));
- 				myY = ((int)(Math.random()*350));
- 			}
+ 			myY = ((int)(Math.random()*500));
+ 			for (myX = mouseX -50; myX < mouseX +50; myX++){
+ 				myY = ((int)(Math.random()*300));
 
+ 			
+ 			}
  		}
  	 
  	
