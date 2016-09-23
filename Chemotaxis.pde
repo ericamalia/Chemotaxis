@@ -49,8 +49,8 @@
  		if (mousePressed){
  			myY = ((int)(Math.random()*500));
  			for (myX = mouseX -50; myX < mouseX +50; myX++){
- 				myY = ((int)(Math.random()*300));
-
+ 				myY = ((int)(Math.random()*mouseY));
+ 				
  			
  			}
  		}
